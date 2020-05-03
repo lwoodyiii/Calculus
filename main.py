@@ -2,9 +2,21 @@ from math import *
 
 def main():
     print("main")
-    nmax = int(inf)
+    nmax = 10
     rsum = ReimannSum(0, pi, nmax, func)
     print(rsum)
+    n = 0
+    R = 0
+    for p in range (50, 200+1):
+        n = num(p)
+        R = Rev(n,p)
+        print (p, n, R)
+
+def num(p):
+    return 1000 - (5*p)
+
+def Rev(n,p):
+    return n*p
 
 def func(x):
     return sin(x)
